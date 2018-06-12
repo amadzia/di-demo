@@ -1,4 +1,4 @@
-package com.example.didemo.services;
+package com.example.services;
 
 import com.example.didemo.repositories.GreetingRepository;
 import org.springframework.context.annotation.Primary;
@@ -6,18 +6,18 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("pl")
+@Profile({"en", "default"})
 @Primary
-public class PrimaryPolishGreetingService implements GreetingService {
+public class PrimaryGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
 
-    public PrimaryPolishGreetingService(GreetingRepository greetingRepository) {
+    public PrimaryGreetingService(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;
     }
 
     @Override
     public String sayGreeting() {
-        return greetingRepository.getPolishGreeting();
+        return greetingRepository.getEnglishGreeting();
     }
 }

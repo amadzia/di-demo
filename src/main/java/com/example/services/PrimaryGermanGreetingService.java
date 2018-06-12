@@ -1,4 +1,4 @@
-package com.example.didemo.services;
+package com.example.services;
 
 import com.example.didemo.repositories.GreetingRepository;
 import org.springframework.context.annotation.Primary;
