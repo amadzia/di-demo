@@ -1,0 +1,43 @@
+# this is a comment
+
+name: Adam
+
+names: #List:
+    - John
+    - Mike
+    - Paul
+
+pound_sign: '#'
+
+#define object:
+book:
+    author: Joe White
+    publisher: random house
+
+truth: yes
+
+second_truth: True
+
+third_truth: true
+
+false: No
+
+second_false: FALSE
+
+third_false: false
+
+string_value: some string
+
+string_value_with_sign: "my list: one, two"
+
+include_new_lines: |
+    feuwfuie hfiewfioe fewf
+    fheuifh ewfef ewfe
+    fewf fewfewf fewfe
+
+ignore_new_lines: >
+    this is
+    just
+    one, long
+    string
+
