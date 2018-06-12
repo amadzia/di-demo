@@ -1,5 +1,6 @@
 package com.example.didemo.services;
 
+import com.example.didemo.repositories.GreetingRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -9,8 +10,14 @@ import org.springframework.stereotype.Service;
 @Primary
 public class PrimaryPolishGreetingService implements GreetingService {
 
+    private GreetingRepository greetingRepository;
+
+    public PrimaryPolishGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
     @Override
     public String sayGreeting() {
-        return "Pozdrowienia - PrimaryPolishGreetingService";
+        return greetingRepository.getPolishGreeting();
     }
 }
