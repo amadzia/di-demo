@@ -3,3 +3,12 @@ didemo:
     username: JMS Username
     password: JmsPass
     url: JmsUrl
+
+---
+spring:
+    profiles: pl
+didemo:
+  jms:
+    username: JMS nazwa uzytkownika
+    password: haslo_jms
+    url: JmsUrlpl
